@@ -40,5 +40,5 @@ jobs:
     - name: docker push
       run: |
         docker login -u santhoshsp -p san@12345
-        docker tag santhoshsp:login santhoshsp/login:${{ github.run_number }}
+        docker tag santhoshsp/login:v1 santhoshsp/login:${{ github.run_number }}
         docker push santhoshsp/login:${{ github.run_number }}
