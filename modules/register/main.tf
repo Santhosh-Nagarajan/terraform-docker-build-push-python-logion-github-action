@@ -13,7 +13,7 @@ resource "docker_image" "zoo" {
 
 resource "null_resource" "demo" {
   provisioner "local-exec" {
-    command = "docker push santhoshsp/login:v1"
+    command = "docker login -u santhoshsp -p san@12345"
   }
 }
 
