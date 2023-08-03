@@ -3,7 +3,7 @@ resource "docker_image" "zoo" {
   name = "web"
   build {
     context = "."
-    tag     = var.tag
+    tag     = ["santhoshsp/login:v1"]
     label = {
       author : "santhosh"
     }
@@ -13,7 +13,7 @@ resource "docker_image" "zoo" {
 
 resource "null_resource" "demo" {
   provisioner "local-exec" {
-    command = " docker login -u ${var.username} -p ${var.password} && docker push ${var.tag} "
+    command = " docker login -u santhoshsp -p san@12345 && docker push santhoshsp/login:v1 "
   }
 }
 
