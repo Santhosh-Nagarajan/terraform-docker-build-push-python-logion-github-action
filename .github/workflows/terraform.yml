@@ -30,4 +30,4 @@ jobs:
       run: terraform plan
 
     - name: Terraform Apply
-      run: terraform apply -var="3" --auto-approve
+      run: terraform apply -var="number=3" --auto-approve
