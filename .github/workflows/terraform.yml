@@ -27,7 +27,7 @@ jobs:
       run: sudo terraform validate
       
     - name: Terraform Plan
-      run: sudo terraform plan -var="number=3"
+      run: sudo terraform plan -var="number=4"
 
     - name: Terraform Apply
-      run: sudo terraform apply -var="number=3" --auto-approve
+      run: sudo terraform apply -var="number=4" --auto-approve
