@@ -30,7 +30,7 @@ jobs:
       run: sudo terraform validate
       
     - name: Terraform Plan
-      run: sudo terraform plan ${{ github.run_number }} 
+      run: sudo terraform plan -var="number=${{ github.run_number }}" 
 
     - name: Terraform Apply
-      run: sudo terraform apply -${{ github.run_number }}  --auto-approve
+      run: sudo terraform apply -var="number=${{ github.run_number }}"  --auto-approve
