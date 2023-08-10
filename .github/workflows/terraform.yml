@@ -18,16 +18,16 @@ jobs:
         terraform_version: 1.0.3   # Specify the desired Terraform version
 
     - name: Terraform Init
-      run: terraform init
+      run: sudo terraform init
       
     - name: Terraform Format
-      run: terraform fmt
+      run: sudo terraform fmt
       
     - name: Terraform Validation
-      run: terraform validate
+      run: sudo terraform validate
       
     - name: Terraform Plan
-      run: terraform plan
+      run: sudo terraform plan
 
     - name: Terraform Apply
-      run: terraform apply -var="number=3" --auto-approve
+      run: sudo terraform apply -var="number=3" --auto-approve
