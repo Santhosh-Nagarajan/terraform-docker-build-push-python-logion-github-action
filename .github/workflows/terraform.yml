@@ -1,4 +1,4 @@
-name: Terraform Deployments
+name: Terraform Module Use Deployments
 
 on:
   push:
