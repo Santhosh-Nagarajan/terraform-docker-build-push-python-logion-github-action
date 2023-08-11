@@ -21,6 +21,6 @@ module "example" {
 }
 
 output "image_id" {
-  value = module.example.docker_image_ids
+  value = module.example.docker_image.build_image.*.id
 }
 
